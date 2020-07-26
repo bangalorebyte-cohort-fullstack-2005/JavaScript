@@ -269,3 +269,109 @@ console.log(mycar.show())
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
 // MDN Link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+
+
+
+
+
+// Scope in computerScience
+// In computer programming, the scope of a name binding(an association of a name to an entity, 
+// such as a variable)is the region of a computer program where the binding is valid: 
+// where the name can be used to refer to the entity. 
+// Such a region is referred to as a scope block.
+
+// The current context of execution. The context in which values and expressions are 
+// "visible" or can be referenced. If a variable or other expression is not "in the current scope," 
+// then it is unavailable for use. Scopes can also be layered in a hierarchy, so that child scopes 
+// have access to parent scopes, but not vice versa.
+
+
+// Javascript Scope
+    // Scope determines the accessibility (visibility) of variables.
+    // In JavaScript there are two types of scope:
+    //     Local scope
+    //     Global scope
+   
+// Example 1:
+
+// // code here can NOT use carName
+
+function myFunction() {
+  var carName = "Volvo";
+  // code here CAN use carName
+}
+
+// // code here can NOT use carName
+
+
+
+
+// Example 2: Global Scope
+
+let carName = "Volvo";
+// code here can use carName
+
+function myFunction() {
+  // code here can also use carName  
+  console.log(carName)
+}
+
+myFunction()
+
+// Link: https://developer.mozilla.org/en-US/docs/Glossary/Scope
+
+
+
+
+
+
+// Javascript Closure
+
+
+// let x = [1,2,3,4]
+
+
+// function add(x, y){
+//     const a = 40
+//     function product(p){
+//         return a*p
+//     }
+// }
+
+// function add(x, y){
+//     console.log(x+y)
+// }
+
+// function product(p){
+//     const a = 40
+//     console.log(p*a)
+//     return p*a   
+// }
+
+// add(product(10), 100)
+// add(400,100)
+
+// What is a lexical environment?
+  // A lexical environment is a data structure that holds identifier-variable mapping.
+  //     (here identifier refers to the name of variables/functions, and the variable is
+  //     the reference to actual object [including function type object] or primitive value).
+
+// What is lexical scope in javascript?
+  // A lexical scope in JavaScript means that a variable defined outside a function can be
+  // accessible inside another function defined after the variable declaration. 
+  // But the opposite is not true, i.e. the variables defined inside a function will not be
+  // accessible outside that function.
+
+
+// What is a closure in JavaScript?
+  // A closure is the combination of a function bundled together (enclosed) with references to its
+  // surrounding state (the lexical environment). In other words, a closure gives you access to
+  // an outer function’s scope from an inner function. In JavaScript, closures are created every
+  // time a function is created, at function creation time.
+      // Functions in JavaScript form closures. 
+      // A closure is the combination of a function and the lexical environment within which that
+      // function was declared. 
+
+// MDN Link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+// W3schools Link: https://www.w3schools.com/js/js_function_closures.asp
+// Medium Link: https://medium.com/@prashantramnyc/javascript-closures-simplified-d0d23fa06ba4
